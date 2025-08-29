@@ -1,5 +1,5 @@
 # 巨海四方支付系统介绍
-##巨海四方支付系统是go语言开发支持多商户、多通道、能够自由进行对接配置、集成telegram机器人服务的聚合支付系统
+## 巨海四方支付系统是go语言开发支持多商户、多通道、能够自由进行对接配置、集成telegram机器人服务的聚合支付系统
 
 ## 系统简介
 ## 运营端：四方运营人员、系统购买方
@@ -14,11 +14,17 @@
 5.其他功能
 
 ## 商户端：四方运营人员的客户、系统购买方的客户
-1.查看开户信息（商户ID,密钥等）
+### 1.查看开户信息（商户ID,密钥等）
 
-2.查看对接文档
+![开户](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/3.png)
 
-3.测试下单
+### 2.查看对接文档
+
+![2](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/4.png)
+
+### 3.测试下单
+
+![2](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/5.png)
 
 4.其他功能
 
@@ -36,46 +42,54 @@
 
 3.四方运营人员（系统购买方）在TG中创建针对商户的业务群，将已经配置好的机器人拉进群，并设置群管理角色
 
-## 运营端部分演示
-1.商户管理
+## 运营端演示
+
+### 1.商户管理
 ​ 商户管理主要用来，创建商户，也就是开户，配置产品费率，以及配置产品对应跑的通道。
 
-1.1 商户列表
-image
 
-1.2 应用列表
-image
+### 1.1 商户列表
+![开户](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/3.png)
 
-1.2.3 产品列表
-image
+### 1.2 应用列表
+![2](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/4.png)
 
-产品配置通道（一个产品可以配置多个通道，这里就是运营人员需要重点关注的点）
+### 1.2.3 产品列表
+![2](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/5.png)
 
-image
 
-1.2.4 商户下单测试界面
+### 产品配置通道（一个产品可以配置多个通道，这里就是运营人员需要重点关注的点）
+
+![2](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/6.png)
+
+### 1.2.4 商户下单测试界面
 商户下单测试可以快速通过不同商户，选择不同的产品，以及不同的通道，来进行测试或者正式下单，可以帮助大家快速获取下单的结果。
 
-这里既可以针对商户对接，测试；也可以针对通道对接，测试。
+![2](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/7.png)
 
-image
+### 可以针对商户对接也可以测试通道对接
+
+![2](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/8.png)
 
 ## 2.订单管理
 订单列表，可以实时查看当前系统订单情况。
 
 1.可以查看每个商户，每个产品，每个通道，商户费率，通道费率，平台成本，平台利润，支付状态，回调状态，补单状态等。
 
-image
+![9](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/9.png)
 
 2.打开实时统计，可以查看当前商户或产品或通道的统计情况
 
-image
+![10](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/10.png)
 
-3.当供应商已经明确支付成功（有时金额不对的情况下），但没有回调成功时，可以通过人工补单操作，此时可以在备注信息中说明情况。补单密码是跟系统分开的。补单并不会修改订单金额，只是会将系统订单状态从支付中，改为已支付。补单有些情况需要跟商户沟通，是否需要进行补单。补单的目的，除了改变系统状态之外，也会向商户发起回调通知。
+## 3.当供应商已经明确支付成功（与实际金额不符）
+但没有回调成功时，可以通过人工补单操作，此时可以在备注信息中说明情况。补单密码是跟系统分开的。补单并不会修改订单金额，只是会将系统订单状态从支付中，改为已支付。补单有些情况需要跟商户沟通，是否需要进行补单。补单的目的，除了改变系统状态之外，也会向商户发起回调通知。
 
-image
+![11](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/11.png)
 
-image
+
+![12](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/12.png)
+
 
 ## 3.支付配置
 ### 3.1 供应商管理
@@ -83,37 +97,49 @@ image
 
 参数映射配置：
 
-第一步，供应商提供信息。包括（供应商开我们，开的户，密钥，下单地址，查单地址，等信息），具体还得看供应商的接口文档。 image 第二步：映射配置。包括下单、查单、回调，这三部分。下单包含，请求参数，返回参数配置；查单也一样，回调只有接收参数配置，而且每个配置都有说明。前期需要我们技术支持一下，带着一起配置几个通道方，以后运营人员就可以自己配置了。 image image image
+第一步，供应商提供信息。包括（供应商开我们，开的户，密钥，下单地址，查单地址，等信息），具体还得看供应商的接口文档。 image 第二步：映射配置。包括下单、查单、回调，这三部分。下单包含，请求参数，返回参数配置；查单也一样，回调只有接收参数配置，而且每个配置都有说明。前期需要我们技术支持一下，带着一起配置几个通道方，以后运营人员就可以自己配置了。
 
+![12](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/13.png)
+![12](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/14.png)
+![12](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/15.png)
 ### 3.2 通道管理
-​ 上述通过供应商对接后，我们需要将供应商提供的通道信息添加进来即可。选择指定的供应商，供应商提供的通道编码、通道名称、通道费率、收款类型（分为固定额度只能是指定的额度，比如：30|50|100|200和浮动额度，区间范围比如：1-9999）、是否启用。这里加了一个回收站：主要是方便管理，只展示有用的通道。暂时不需要的可以进行回收操作，到回收站中的通道管理进行查看。 image image
+​ 上述通过供应商对接后，我们需要将供应商提供的通道信息添加进来即可。选择指定的供应商，供应商提供的通道编码、通道名称、通道费率、收款类型（分为固定额度只能是指定的额度，比如：30|50|100|200和浮动额度，区间范围比如：1-9999）、是否启用。这里加了一个回收站：主要是方便管理，只展示有用的通道。暂时不需要的可以进行回收操作，到回收站中的通道管理进行查看。 
 
+![16](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/16.png)
+![17](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/17.png)
 ### 3.3 产品管理
 ​ 产品，在四方系统可以认为是一个大通道，我们给到商户的产品编码（也可以叫通道编码）和产品名称（也可以叫通道名称）。也就是对外推广和营销的大通道。这里由我们运营人员自定义一套产品（大通道）规则。
-
-​ 可以提前自定义好，产品编码（大通道编码）和产品名称（大通道名称）。 image
+​ 可以提前自定义好，产品编码（大通道编码）和产品名称（大通道名称）。 
+![18](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/18.png)
 
 ## 4.机器人管理
 ### 4.1 配置机器人
 如果第一次接触TG机器人，需要到TG上注册一个机器人，获取token，进行设置，同时需要注册webhook方式，将机器人绑定到系统中去。请注意：如果是新部署的服务器域名必须要安装证书，也就是需要支持https
 
-image image image
+
 
 ### 4.2 群组管理
 这里的群组由运营人员，建好群后，并将机器人拉入群中，作为管理员权限，就会自动将群信息推送到后台系统中。如果运营人员通过命令绑定商户，就会自动关联群组。如果没有绑定，则显示暂未关联商户。同时，也可以自己建好群（频道）。建好群后，也可以添加群成员，设定权限。
 
-image image
+![19](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/19.png)
+![20](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/20.png)
 
 ### 4.3 消息管理
-这里可以新增消息，选择对应的群，进行转发 image image image
+这里可以新增消息，选择对应的群，进行转发 
 
+![21](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/21.png)
+![22](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/22.png)
+![23](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/23.png)
+![24](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/24.png)
 ## 商户系统部分演示
 ### 1.商户首页
-包括商户的基本信息，对接信息等 image
+包括商户的基本信息，对接信息等 
 
+![24](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/24.png)
 ### 2.商户收银台
-这里可以测试下单 image
+这里可以测试下单 
 
+![24](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/24.png)
 对接
 对接在运营端中支付配置下的供应商管理界面。
 
@@ -123,19 +149,19 @@ TG机器人在运营端中机器人管理界面
 日常机器人常见运营截图展示：
 
 ### 1.绑定商户
-image
+
+![27](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/27.png)
 
 ### 2.新增预付，及预付历史详情
-image image
+![28](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/28.png)
+![29](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/29.png)
 
 ### 3.查单
-image
+![30](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/30.png)
 
 ### 4.今日账单
-image
+![24](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/24.png)
 
-### 5.补单,以及查看补单历史记录
-image image image
 
 ## 合作模式
 ### 方式1：出租
@@ -155,7 +181,10 @@ image image image
 ### 方式2：出售
 只出售源码，不代买(服务器 + 域名 + 域名免费升级https)，不帮忙搭建部署免费 + 不帮忙功能更新
 
-商务合作
+# 合作联系
+## 商务tg：[tianxiex](https://t.me/tianxiex)
+
+
 
 请联系飞机：详谈
 
