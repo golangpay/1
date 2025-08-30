@@ -1,5 +1,5 @@
-# 巨海四方支付系统介绍
-##巨海四方支付系统是go语言开发支持多商户、多通道、能够自由进行对接配置、集成telegram机器人服务的聚合支付系统
+<img width="960" height="20" alt="image" src="https://github.com/user-attachments/assets/06d9c0f5-1656-487b-9b85-33e9ae00a5a5" /># 巨海四方支付系统介绍
+巨海四方支付系统是go语言开发支持多商户、多通道、能够自由进行对接配置、集成telegram机器人服务的聚合支付系统
 
 ## 系统简介
 ## 运营端：四方运营人员、系统购买方
@@ -41,24 +41,26 @@
 ​ 商户管理主要用来，创建商户，也就是开户，配置产品费率，以及配置产品对应跑的通道。
 
 1.1 商户列表
-image
+![商户列表](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/3.png)
+
+
 
 1.2 应用列表
-image
+![应用列表](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/4.png)
 
 1.2.3 产品列表
 image
 
 产品配置通道（一个产品可以配置多个通道，这里就是运营人员需要重点关注的点）
 
-image
+![产品列表](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/5.png)
 
 1.2.4 商户下单测试界面
 商户下单测试可以快速通过不同商户，选择不同的产品，以及不同的通道，来进行测试或者正式下单，可以帮助大家快速获取下单的结果。
 
 这里既可以针对商户对接，测试；也可以针对通道对接，测试。
 
-image
+![6](https://raw.githubusercontent.com/golangpay/1/refs/heads/img/pay/6.png)
 
 ## 2.订单管理
 订单列表，可以实时查看当前系统订单情况。
