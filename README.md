@@ -6,10 +6,15 @@
 go语言支付系统在线体验 演示地址：
 
 运营端：https://homea.golangpay.com 
-账号:xitong 登录密码：123456789
+
+账号:xitong
+登录密码：123456789
 
 商户端：https://sha.golangpay.com 
-账号：test 登录密码：123456789
+
+账号：test 
+
+登录密码：123456789
 
 测试账号密码会定期更改，如不对请联系客服发新的账号密码
 
@@ -17,9 +22,15 @@ go语言支付系统在线体验 演示地址：
 
 go语言支付系统演示地址：
 
-运营端：http://home.golangpay.com 帐号：jeepay 登录密码：jeepay123
+运营端：http://home.golangpay.com 
 
-商户端：http://sh.golangpay.com 帐号：mchtest 登录密码：mch123123
+帐号：xitong
+
+登录密码：123456789
+
+商户端：http://sh.golangpay.com 
+
+帐号：mchtest 登录密码：mch123123
 
 系统均采用golangpay语言开发，会golangpay的技术人员可以自行二次开发
 
